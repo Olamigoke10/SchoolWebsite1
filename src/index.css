@@ -1,25 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --color-bg: #f1f4f9;
+  --color-bg-subtle: linear-gradient(180deg, #eef2f8 0%, #f6f8fc 45%, #f1f4f9 100%);
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-accent-start: #312e81;
+  --color-accent-mid: #4f46e5;
+  --color-accent-end: #7c3aed;
+  --color-accent-soft: rgba(79, 70, 229, 0.12);
+  --color-border: rgba(15, 23, 42, 0.08);
+  --color-border-strong: rgba(15, 23, 42, 0.12);
+
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 20px rgba(15, 23, 42, 0.07), 0 2px 6px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 16px 48px rgba(15, 23, 42, 0.1), 0 6px 16px rgba(15, 23, 42, 0.06);
+  --shadow-glow: 0 8px 32px rgba(79, 70, 229, 0.25);
+
+  --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-display: 'Plus Jakarta Sans', var(--font-sans);
+
+  --section-spacing: clamp(3.5rem, 7vw, 5.5rem);
+  --nav-height: 4.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 
 html {
   scroll-behavior: smooth;
 }
 
-section[id] {
-  scroll-margin-top: 88px;
+section[id],
+#hero {
+  scroll-margin-top: 96px;
 }
 
-*{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
 }
 
-body{
-  background: #F5F5F5
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  background-image: var(--color-bg-subtle);
+  background-attachment: fixed;
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-a{
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
   text-decoration: none;
   color: inherit;
   line-height: 1;
@@ -28,35 +77,110 @@ a{
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #212ea0;
+  outline: 2px solid var(--color-accent-mid);
   outline-offset: 3px;
 }
 
-.container{
-  padding-left: 10%;
-  padding-right: 10%;
+.container {
+  padding-left: clamp(1.25rem, 5vw, 10%);
+  padding-right: clamp(1.25rem, 5vw, 10%);
 }
 
-.btn{
-  background: #FFF;
-  color: #212121;
-  padding: 14px 25px;
-  font-size: 16px;
-  border-radius: 30px;
+.page-shell {
+  min-height: 100vh;
+}
+
+.section-block {
+  padding-block: var(--section-spacing);
+}
+
+.section-block:first-of-type {
+  padding-top: 0;
+}
+
+.section-block--tight-top {
+  padding-top: calc(var(--section-spacing) * 0.5);
+}
+
+/* Legacy + shared button base */
+.btn {
+  padding: 0.875rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  border-radius: var(--radius-full);
   cursor: pointer;
   border: 0;
-  outline: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
-.btn img{
-  width: 20px;
-  margin-left: 10px;
+.btn img {
+  width: 1.25rem;
+  height: auto;
 }
 
-.btn.dark-btn{
-  background: #212EA0;
-  color: #FFF;
+.btn.dark-btn,
+.btn.btn-primary {
+  background: linear-gradient(135deg, var(--color-accent-start) 0%, var(--color-accent-mid) 45%, var(--color-accent-end) 100%);
+  color: #fff;
+  box-shadow: var(--shadow-md), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.btn.dark-btn:hover,
+.btn.btn-primary:hover {
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.btn.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn.btn-secondary:hover {
+  border-color: rgba(79, 70, 229, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.btn.btn-ghost-light {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.btn.btn-ghost-light:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent-mid), var(--color-accent-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-rule {
+  height: 3px;
+  width: 3rem;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--color-accent-mid), var(--color-accent-end));
+  margin-inline: auto;
+}
+
+.page-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  padding: clamp(1.5rem, 4vw, 2.25rem);
 }

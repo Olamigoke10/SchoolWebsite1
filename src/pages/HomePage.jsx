@@ -4,30 +4,42 @@ import Title from '../Components/Title/Title'
 import About from '../Components/About/About'
 import Campus from '../Components/Campus/Campus'
 import Testimonials from '../Components/Testimonials/Testimonials'
+import { MotionSection } from '../Components/MotionSection'
+import { GraduationCap, Images, MessageCircle } from 'lucide-react'
 
 const HomePage = () => {
   return (
     <>
-      <header id="hero">
+      <header>
         <Hero />
       </header>
-      <main>
+      <main className="home-main">
         <div className="container">
-          <section id="programs" aria-labelledby="programs-heading">
-            <Title subTitle="Our PROGRAM" title="What We Offer" titleId="programs-heading" />
+          <MotionSection id="programs" aria-labelledby="programs-heading" className="section-block--tight-top">
+            <Title
+              subTitle="Our programs"
+              title="Learning paths built for real momentum"
+              titleId="programs-heading"
+              icon={GraduationCap}
+            />
             <Programs />
-          </section>
-          <section id="about" aria-labelledby="about-heading">
+          </MotionSection>
+          <MotionSection id="about" aria-labelledby="about-heading">
             <About headingId="about-heading" />
-          </section>
-          <section id="campus" aria-labelledby="campus-heading">
-            <Title subTitle="Gallery" title="School Photos" titleId="campus-heading" />
+          </MotionSection>
+          <MotionSection id="campus" aria-labelledby="campus-heading">
+            <Title subTitle="Gallery" title="Life on campus" titleId="campus-heading" icon={Images} />
             <Campus />
-          </section>
-          <section id="testimonials" aria-labelledby="testimonials-heading">
-            <Title subTitle="TESTIMONIALS" title="What Student Says" titleId="testimonials-heading" />
+          </MotionSection>
+          <MotionSection id="testimonials" aria-labelledby="testimonials-heading">
+            <Title
+              subTitle="Testimonials"
+              title="Trusted by families and alumni"
+              titleId="testimonials-heading"
+              icon={MessageCircle}
+            />
             <Testimonials />
-          </section>
+          </MotionSection>
         </div>
       </main>
     </>

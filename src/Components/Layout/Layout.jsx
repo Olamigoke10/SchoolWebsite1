@@ -8,7 +8,9 @@ const Layout = () => {
     <>
       <ScrollToHash />
       <Navbar />
-      <Outlet />
+      <div className="page-shell">
+        <Outlet />
+      </div>
       <Footer />
     </>
   )

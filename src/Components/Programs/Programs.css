@@ -1,47 +1,74 @@
-.programs{
-    margin: 80px auto;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.programs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
 }
 
-.program img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
+.program-card {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  transition: box-shadow 0.35s ease;
 }
 
-.program{
-    flex-basis: 31%;
-    position: relative;
+.program-card:hover {
+  box-shadow: var(--shadow-lg);
 }
 
-.caption{
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 15, 152, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #fff;
-    cursor: pointer;
-    opacity: 0;
-    padding-top: 70%;
-    transition: 0.4s;
+.program-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
 }
 
-.caption img{
-    width: 60px;
-    margin-bottom: 10px;
+.program-card__media > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
-.program:hover .caption{
-    opacity: 1;
-    padding-top: 0;
+.program-card:hover .program-card__media > img {
+  transform: scale(1.04);
+}
+
+.program-card__caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(49, 46, 129, 0.88), rgba(79, 70, 229, 0.75));
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.program-card__caption img {
+  width: 3rem;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.program-card:hover .program-card__caption {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .programs {
+    grid-template-columns: 1fr;
+    max-width: 24rem;
+  }
 }
