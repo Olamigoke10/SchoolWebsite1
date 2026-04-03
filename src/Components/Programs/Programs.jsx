@@ -10,9 +10,24 @@ import programs_icon_3 from '../../assets/program-icon-3.png'
 const ease = [0.22, 1, 0.36, 1]
 
 const ITEMS = [
-  { img: programs_1, icon: programs_icon_1, alt: 'Students celebrating graduation', label: 'Graduation Degree' },
-  { img: programs_2, icon: programs_icon_2, alt: 'Graduate students in academic regalia', label: 'Masters Degree' },
-  { img: programs_3, icon: programs_icon_3, alt: 'Postgraduate scholars collaborating', label: 'Post Graduation' },
+  {
+    img: programs_1,
+    icon: programs_icon_1,
+    alt: 'Young children learning and playing in a safe creche environment',
+    label: 'Creche',
+  },
+  {
+    img: programs_2,
+    icon: programs_icon_2,
+    alt: 'Primary school pupils engaged in classroom activities',
+    label: 'Primary',
+  },
+  {
+    img: programs_3,
+    icon: programs_icon_3,
+    alt: 'Secondary students collaborating on projects',
+    label: 'Secondary',
+  },
 ]
 
 const Programs = () => {

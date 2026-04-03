@@ -13,28 +13,28 @@ const SLIDES = [
     location: 'Parent, Lagos',
     avatar: user_1,
     quote:
-      "Moon Stars Scholars Academy transformed my child's education. With its forward-thinking curriculum and supportive community, my child has blossomed into a confident learner ready to tackle any challenge the future brings.",
+      "MoonStarsScholars Academy transformed my child's education. From creche onward, the caring staff and structured programs helped my child become a confident, curious learner ready for each new stage.",
   },
   {
     name: 'Chinedu Adeyemi',
-    location: 'Alumnus, Abuja',
+    location: 'Former student, Abuja',
     avatar: user_2,
     quote:
-      'Enrolling at Moon Stars Scholars Academy was the best decision I made for my academic journey. The personalized support, diverse environment, and cutting-edge resources have propelled me towards my dreams.',
+      'Attending MoonStarsScholars Academy through secondary school was the best foundation I could have asked for. The personalized support, diverse classmates, and dedicated teachers set me up for the next chapter with confidence.',
   },
   {
     name: 'Amara Bello',
     location: 'Parent, Port Harcourt',
     avatar: user_3,
     quote:
-      "As a parent, I couldn't be happier with the education my children are receiving at Moon Stars Scholars Academy. The inclusive atmosphere and top-notch facilities make it a truly exceptional learning environment.",
+      "As a parent, I couldn't be happier with the education my children are receiving at MoonStarsScholars Academy. The inclusive atmosphere and facilities support them from early years through secondary with real consistency.",
   },
   {
     name: 'David Okafor',
     location: 'Student, Enugu',
     avatar: user_4,
     quote:
-      'Attending Moon Stars Scholars Academy has been an enriching experience. The interdisciplinary approach to learning, coupled with opportunities for extracurricular involvement, has broadened my horizons and prepared me for success beyond graduation.',
+      'MoonStarsScholars Academy has been an enriching experience across primary and secondary. The blend of academics, clubs, and character-building opportunities has prepared me for success after secondary school.',
   },
 ]
 

@@ -5,9 +5,9 @@ import about_img from '../../assets/about.png'
 import play_icon from '../../assets/play-icon.png'
 
 const BULLETS = [
-  'Cutting-edge facilities and interdisciplinary studies in a welcoming, inclusive community.',
-  'A curriculum that blends science, art, and humanities with collaborative, real-world projects.',
-  'Extracurriculars, service, and academics that inspire lifelong curiosity.',
+  'Safe, stimulating creche care and early-years learning that builds social and school-ready skills.',
+  'Primary years that strengthen literacy, numeracy, creativity, and confidence in a nurturing environment.',
+  'Secondary pathways that deepen subject mastery, leadership, and preparation for life after school.',
 ]
 
 const About = ({ headingId }) => {
@@ -24,7 +24,7 @@ const About = ({ headingId }) => {
       >
         <img
           src={about_img}
-          alt="Moon Stars Scholars Academy campus and students"
+          alt="MoonStarsScholars Academy campus and students from creche through secondary"
           className="about-img"
         />
         <img src={play_icon} alt="Play video" className="play-icon" />
@@ -37,12 +37,12 @@ const About = ({ headingId }) => {
         transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="about-kicker" id={headingId}>
-          About Moon Stars Scholars Academy
+          About MoonStarsScholars Academy
         </p>
-        <h2 className="about-title">Knowledge is power—applied with purpose</h2>
+        <h2 className="about-title">Growing minds from creche to secondary</h2>
         <p className="about-lead">
-          Students embark on a journey of discovery with faculty who care, peers who challenge, and
-          programs designed for the world ahead.
+          Families choose us for consistent care and quality across every stage—warm teachers, clear
+          values, and a campus where children feel known and supported.
         </p>
         <ul className="about-list" aria-label="Highlights">
           {BULLETS.map((text) => (

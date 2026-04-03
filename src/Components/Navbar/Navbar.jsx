@@ -83,7 +83,7 @@ const Navbar = () => {
       >
         <div className="site-nav__bar">
           <Link to="/" className="site-nav__logo">
-            <img src={logo} alt="Moon Stars Scholars Academy" width={180} />
+            <img src={logo} alt="MoonStarsScholars Academy" width={180} />
           </Link>
 
           <NavLinks className="site-nav__links site-nav__links--desktop" />

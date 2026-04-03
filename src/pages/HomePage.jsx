@@ -5,7 +5,7 @@ import About from '../Components/About/About'
 import Campus from '../Components/Campus/Campus'
 import Testimonials from '../Components/Testimonials/Testimonials'
 import { MotionSection } from '../Components/MotionSection'
-import { GraduationCap, Images, MessageCircle } from 'lucide-react'
+import { Images, MessageCircle, School } from 'lucide-react'
 
 const HomePage = () => {
   return (
@@ -18,9 +18,9 @@ const HomePage = () => {
           <MotionSection id="programs" aria-labelledby="programs-heading" className="section-block--tight-top">
             <Title
               subTitle="Our programs"
-              title="Learning paths built for real momentum"
+              title="From creche through secondary—one caring journey"
               titleId="programs-heading"
-              icon={GraduationCap}
+              icon={School}
             />
             <Programs />
           </MotionSection>
@@ -34,7 +34,7 @@ const HomePage = () => {
           <MotionSection id="testimonials" aria-labelledby="testimonials-heading">
             <Title
               subTitle="Testimonials"
-              title="Trusted by families and alumni"
+              title="Trusted by families and students"
               titleId="testimonials-heading"
               icon={MessageCircle}
             />

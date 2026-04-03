@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <footer id="contact" className="site-footer">
       <div className="site-footer__inner container">
-        <h2 className="site-footer__title">Moon Stars Scholars Academy</h2>
+        <h2 className="site-footer__title">MoonStarsScholars Academy</h2>
         <p className="site-footer__lead">
-          Questions about admissions or campus visits? Reach us by email or phone—we typically reply
-          within one business day.
+          Creche through secondary—questions about admissions or campus visits? Reach us by email or
+          phone; we typically reply within one business day.
         </p>
         <div className="site-footer__channels">
           <a className="site-footer__link" href="mailto:info@moonstarsscholars.example">

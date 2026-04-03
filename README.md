@@ -1,6 +1,6 @@
-# Moon Stars Scholars Academy — school website
+# MoonStarsScholars Academy — school website
 
-Public marketing site for **Moon Stars Scholars Academy**, built with **React 18** and **Vite 5**. It includes a home landing page (hero, programs, about, gallery, testimonials), plus **Admissions**, **Contact**, and **News** pages via **React Router**.
+Public marketing site for **MoonStarsScholars Academy** (creche, primary, and secondary), built with **React 18** and **Vite 5**. It includes a home landing page (hero, programs, about, gallery, testimonials), plus **Admissions**, **Contact**, and **News** pages via **React Router**.
 
 ## Scripts
 

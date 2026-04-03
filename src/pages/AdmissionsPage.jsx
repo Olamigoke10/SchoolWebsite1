@@ -10,8 +10,8 @@ const AdmissionsPage = () => {
           <header className="page-hero">
             <h1>Admissions</h1>
             <p className="page-lead">
-              Learn how to apply to Moon Stars Scholars Academy. We welcome families who share our
-              commitment to academic excellence and an inclusive community.
+              Learn how to apply to MoonStarsScholars Academy. We welcome families who share our
+              commitment to excellence from creche through secondary in an inclusive community.
             </p>
           </header>
           <section className="page-section" aria-labelledby="process-heading">

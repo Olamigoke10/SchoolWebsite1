@@ -11,8 +11,8 @@ const ContactPage = () => {
           <header className="page-hero">
             <h1>Contact</h1>
             <p className="page-lead">
-              We are happy to answer questions about programs, visits, and enrollment at Moon Stars
-              Scholars Academy.
+              We are happy to answer questions about programs, visits, and enrollment at
+              MoonStarsScholars Academy—from creche to secondary.
             </p>
           </header>
           <section className="page-section contact-details" aria-labelledby="reach-heading">

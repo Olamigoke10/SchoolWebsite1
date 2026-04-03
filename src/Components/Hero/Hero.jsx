@@ -44,8 +44,9 @@ const Hero = () => {
             <span className="hero__title-accent">bold, capable futures</span>
           </motion.h1>
           <motion.p className="hero__lead" {...itemProps}>
-            Moon Stars Scholars Academy pairs rigorous academics with an inclusive community—so
-            students grow with confidence, curiosity, and the skills to shape what comes next.
+            MoonStarsScholars Academy offers creche, primary, and secondary programs in one
+            supportive community—nurturing confidence, character, and strong foundations from the
+            earliest years through graduation.
           </motion.p>
           <motion.div className="hero__actions" {...itemProps}>
             <motion.div whileHover={reduced ? undefined : { scale: 1.02 }} whileTap={reduced ? undefined : { scale: 0.98 }}>
